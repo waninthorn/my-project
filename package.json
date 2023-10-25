@@ -1,18 +1,26 @@
 {
     "private": true,
     "scripts": {
-        "dev": "npm run development",
+        "dev": "npm run development ",
         "development": "mix",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000",
-        "hot": "mix watch --hot",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "npm run development -- --hot",
         "prod": "npm run production",
-        "production": "mix --production"
+        "production": "mix --production",
+        "watch:css": "onchange 'resources/sass/main.scss' -- npm run scss"
     },
+    
     "devDependencies": {
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
+        "onchange": "^7.1.0",
+        "postcss": "^8.1.14",
+        "sass": "^1.69.4",
+        "sass-loader": "^12.1.0"
+    },
+    "dependencies": {
+        "bootstrap": "^5.3.2"
     }
 }

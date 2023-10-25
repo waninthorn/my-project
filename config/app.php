@@ -51,7 +51,11 @@ return [
     | your application so that it is used when running Artisan tasks.
     |
     */
-
+    'development' => [
+        'path' => env('DEV_SERVER_PATH', 'server.php'),
+        'port' => 80, // เปลี่ยนเป็นพอร์ตที่คุณต้องการ
+    ],
+    
     'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL', null),
